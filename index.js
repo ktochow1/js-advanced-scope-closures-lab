@@ -3,12 +3,12 @@ function produceDrivingRange(blockRange){
       var start = parseInt(startBlock);
       var end = parseInt(endBlock);
       var distanceToTravel = Math.abs(end - start);
-      var difference = blockRange - distanceToTravel;
+      var difference = Math.abs(blockRange - distanceToTravel);
 
       if(difference >  0){
         return `within range by ${difference}`
       } else {
-        return `${Math.abs(difference)} blocks out of range`
+        return `${(difference)} blocks out of range`
       }
   }
 }
